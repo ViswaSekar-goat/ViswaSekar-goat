@@ -9,7 +9,7 @@
 
 ### 📚 Libraries & Frameworks
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=react,express,css,pytorch,numpy,pandas,sklearn,matplotlib&perline=7" />
+  <img src="https://skillicons.dev/icons?i=react,express,css,pytorch,numpy,matplotlib&perline=7" />
 </p>
 
 ### 🛠️ Developer Tools
