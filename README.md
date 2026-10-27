@@ -4,12 +4,12 @@
 
 ### 👨‍💻 Programming Languages
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,javascript,r&perline=5" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,javascript&perline=5" />
 </p>
 
 ### 📚 Libraries & Frameworks
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=react,express,css,pytorch,numpy,pandas,sklearn,matplotlib&perline=6" />
+  <img src="https://skillicons.dev/icons?i=react,express,css,pytorch,numpy,pandas,sklearn,matplotlib&perline=7" />
 </p>
 
 ### 🛠️ Developer Tools
@@ -21,20 +21,6 @@
 <p align="left">
   <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb&perline=3" />
 </p>
-
-### ⚙️ Engineering Software
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=matlab&perline=1" />
-</p>
-
-### 📊 Other Software
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=visualstudio&perline=1" />
-</p>
-
-### 🎓 NPTEL Courses
-- 📈 Data Analytics with Python
-- 🌐 Internet of Things
 
 
 <!--
