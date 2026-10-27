@@ -1,5 +1,42 @@
 ## Hi there 👋
 
+## 💻 Technical Skills
+
+### 👨‍💻 Programming Languages
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,javascript,r&perline=5" />
+</p>
+
+### 📚 Libraries & Frameworks
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,express,css,pytorch,numpy,pandas,sklearn,matplotlib&perline=6" />
+</p>
+
+### 🛠️ Developer Tools
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=git,docker,postman,vscode&perline=4" />
+</p>
+
+### 🗄️ Databases
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb&perline=3" />
+</p>
+
+### ⚙️ Engineering Software
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=matlab&perline=1" />
+</p>
+
+### 📊 Other Software
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=visualstudio&perline=1" />
+</p>
+
+### 🎓 NPTEL Courses
+- 📈 Data Analytics with Python
+- 🌐 Internet of Things
+
+
 <!--
 **ViswaSekar-goat/ViswaSekar-goat** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
