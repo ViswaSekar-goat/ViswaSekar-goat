@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: crosscore/contribution-gallery
-          ref: v1
+          ref: main
           path: contribution-gallery
 
       - name: Set up Node.js
