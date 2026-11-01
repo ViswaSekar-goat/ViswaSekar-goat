@@ -1,4 +1,4 @@
-name: Generate Neon Arcade Contribution Graph
+name: Generate Constellation Contribution Graph
 
 on:
   schedule:
@@ -9,31 +9,60 @@ on:
       - main
     paths:
       - ".github/workflows/neon-arcade.yml"
-      - "scripts/neonize_svg.py"
+
+permissions:
+  contents: write
 
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
-      - name: Generate Pac-Man contribution graph
-        uses: abozanona/pacman-contribution-graph@main
+      - name: Checkout contribution-gallery renderer
+        uses: actions/checkout@v4
         with:
-          github_user_name: ${{ github.repository_owner }}
-          games: "pacman"
-          hide_month_labels: "false"
+          repository: crosscore/contribution-gallery
+          ref: v1
+          path: contribution-gallery
 
-      - name: Apply neon arcade styling
-        run: python3 scripts/neonize_svg.py dist
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: contribution-gallery/package-lock.json
 
-      - name: Publish animated SVGs
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Install renderer dependencies
+        working-directory: contribution-gallery
+        run: npm ci
+
+      - name: Keep only the Constellation scene
+        working-directory: contribution-gallery
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("src/renderer/scenes/index.ts")
+          s = p.read_text()
+          old = "export const SCENES: Scene[] = [plasma, constellation, tide, aurora, pathfinder, life, sort, pong, fireworks, ripples];"
+          new = "export const SCENES: Scene[] = [constellation];"
+          if old not in s:
+              raise SystemExit("Could not find the expected SCENES declaration; refusing to modify an unknown renderer version.")
+          p.write_text(s.replace(old, new))
+          PY
+
+      - name: Generate animated constellation SVG from real contributions
+        working-directory: contribution-gallery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p ../dist
+          npx tsx src/cli.ts --user "${{ github.repository_owner }}" --mode ambient --dark --output ../dist/constellation-dark.svg
+
+      - name: Publish SVG to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
