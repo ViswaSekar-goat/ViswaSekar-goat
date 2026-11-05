@@ -38,17 +38,13 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
 
-## 🌌 Constellation Contributions
+## Constellation Contributions
 
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/ViswaSekar-goat/ViswaSekar-goat/output/constellation-dark.svg"
     alt="Animated GitHub contribution constellation"
     width="100%">
-</p>
-
-<p align="center">
-  <sub>EVERY CONTRIBUTION LEAVES A STAR ✦</sub>
 </p>
 
 <!--
